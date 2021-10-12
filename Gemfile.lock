@@ -51,9 +51,9 @@ GEM
     bindex (0.7.0)
     bootsnap (1.4.3)
       msgpack (~> 1.0)
-    bootstrap (4.4.1)
+    bootstrap (5.1.0)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
+      popper_js (>= 2.9.3, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
@@ -120,7 +120,7 @@ GEM
     parallel (1.18.0)
     parser (2.6.5.0)
       ast (~> 2.4.0)
-    popper_js (1.16.0)
+    popper_js (2.9.3)
     public_suffix (3.1.1)
     puma (3.12.1)
     rack (2.0.7)
@@ -253,7 +253,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4.4.1)
+  bootstrap
   byebug
   capybara
   factory_bot_rails
