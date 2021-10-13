@@ -1,0 +1,7 @@
+<tr id="post-<%= post.id %>">
+  <td>
+    <h3 class="small"><%=  post.film_title %></h3>
+    <div id="js-comment-<%= post.id %>" >
+      <%= simple_format(post.scene) %>
+    </div>    
+  </td>
