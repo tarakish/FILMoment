@@ -1,5 +1,5 @@
 <h1><%= @actor.name %></h1>
 <h2><%= link_to 'どんな人？', @actor.wiki_url %></h2>
 
-
+<%= render 'posts/form', { actor: @actor, post: @post } %>
 

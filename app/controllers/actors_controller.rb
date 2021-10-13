@@ -6,7 +6,8 @@ class ActorsController < ApplicationController
   end
 
   def show
-    
+    @post = Post.new
+    @posts = @actor.posts
   end
 
   private
