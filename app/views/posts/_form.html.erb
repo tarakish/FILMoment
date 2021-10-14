@@ -1,6 +1,6 @@
 <div class="row mb-3">
   <div class="col-lg-8 offset-lg-2">
-    <%= form_with model: post, url:[actor, post], id: "new_post", local: true do |f| %> <%#url: [board, comment]は何を生成してる？boards/:board_id/comments??、idを付与しているのは下のエラーメッセージのパーシャルの位置を判定するため %>
+    <%= form_with model: post, url:[actor, post], id: "new_post", local: true do |f| %><%#idを付与しているのは下のエラーメッセージのパーシャルの位置を判定するため %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="form-group">
         <%= f.label :scene %>
@@ -14,7 +14,7 @@
         <%= f.label :author %>
         <%= f.text_field :author, class: 'form-control', id: 'js-new-post-author', placeholder: '投稿者名' %>
       </div>
-      <%= f.submit class: 'btn btn-primary' %>
+      <%= f.submit '語る！',class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>
