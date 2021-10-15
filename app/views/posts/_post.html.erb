@@ -3,5 +3,15 @@
     <h3 class="small"><%=  post.film_title %></h3>
     <div id="js-comment-<%= post.id %>" >
       <%= simple_format(post.scene) %>
-    </div>    
+    </div>
+  </td>
+  <td>
+    <ul class="list-inline justify-content-center" style="float: right;">
+      <li class="list-inline-item">
+        すこ数：<%= post.likes.count %>
+      </li>
+      <li>
+        <%= link_to 'すこ', post_likes_path(post), method: post %>
+      </li>
+    </ul>
   </td>
