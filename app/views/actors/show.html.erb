@@ -1,7 +1,10 @@
-<h1><%= @actor.name %></h1>
-<h2><%= link_to 'どんな人？', @actor.wiki_url %></h2>
-
-<%= render 'posts/form', { actor: @actor, post: @post } %>
-
-<%= render 'posts/posts', {posts: @posts } %>
-
+<div class="container mt-3 mb-5 pt-5">
+  <div class="row justify-content-center mb-5" style="font-family: 'Sawarabi Mincho', sans-serif; backg">
+    <h1><%= @actor.name %></h1>
+  </div>
+  <div class="row justify-content-center">
+    <h2><%= link_to '(電球)どんな人？', @actor.wiki_url %></h2>
+  </div>
+  <%= render 'posts/posts', {posts: @posts } %>
+  <%= render 'posts/form', { actor: @actor, post: @post } %>
+</div>

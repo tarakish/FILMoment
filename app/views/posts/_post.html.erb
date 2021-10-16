@@ -1,17 +1,15 @@
 <tr id="post-<%= post.id %>">
-  <td>
-    <h3 class="small"><%=  post.film_title %></h3>
-    <div id="js-comment-<%= post.id %>" >
+  <td class="pb-2">
+    <div id="js-comment-<%= post.id %>" class="pb-1 post-scene">
       <%= simple_format(post.scene) %>
     </div>
+    <h3 class="small"><%= post.film_title %>／<%= post.author %></h3>
   </td>
   <td>
-    <ul class="list-inline justify-content-center" style="float: right;">
-      <li class="list-inline-item">
-        すこ数：<%= post.likes.count %>
-      </li>
-      <li>
-        <%= link_to 'すこ', post_likes_path(post), method: post %>
-      </li>
-    </ul>
+    <div class="list-inline justify-content-center mr-4" style="float: right;">
+        <%= link_to post_likes_path(post), method: post do %>
+          <i class="far fa-heart size"></i>
+        <% end %>
+        <h3 class="small mt-2 ml-1 likes"><%= post.likes.count %></h3>
   </td>
+</tr>
