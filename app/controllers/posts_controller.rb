@@ -5,8 +5,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to actor_path(@actor), success: '想いを追加しました'
     else
-      flash.now[:danger] = 'ごめんなさい、想いを追加出来ませんでした'
-      render actor_path(@actor)
+      redirect_to actor_path(@actor), danger: 'ごめんなさい、想いを追加出来ませんでした'
     end
   end
 
