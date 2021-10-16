@@ -1,33 +1,23 @@
 <%# <% content_for(:title, t('.title')) %>
-<div class="container mb-5 pt-5">
-  <h1>Actors</h1>
+<div class="container mt-3 mb-5 pt-5">
+  <div class="row justify-content-center mb-5" style="font-family: 'Nothing You Could Do', cursive;">
+    <h1>Actors</h1>
+  </div>
   <%# <div class="row">
     <div class="col-md-12 mb-3">
       <%= render 'search_form' 
     </div>
   </div> %>
-  <div class="row pt-3">
-    <div class="col-md-12">
-      <table class="table table-striped t-5">
+  <div class="row pt-1 justify-content-center">
+    <div class="col-md-8">
+      <table class="table table-hover t-5 text-center" style="font-family: 'Sawarabi Mincho', sans-serif; backg">
         <thead>
-        <tr>
-          <th scope="col">Name</th>
+        <tr style="background-color:#54724f; color:#f7edd9;">
+          <th scope="col">Actor</th>
           <th scope="col">Scenes</th>
-          <%# <th scope="col">各actorのシーン保持数</th> %>
         </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>
-              <% @actors.each do |actor| %>
-                <%= link_to actor.name, actor_path(actor) %>
-              <% end %>
-            </td>
-            <%# <td>
-              34
-            </td> %>
-          </tr>
-        </tbody>
+        <%= render @actors %>
       </table>
     </div>
   </div>
