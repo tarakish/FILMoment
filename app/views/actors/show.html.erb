@@ -2,8 +2,13 @@
   <div class="row justify-content-center mb-5" style="font-family: 'Sawarabi Mincho', sans-serif; backg">
     <h1><%= @actor.name %></h1>
   </div>
-  <div class="row justify-content-center">
-    <h2><%= link_to '(電球)どんな人？', @actor.wiki_url %></h2>
+    <h5 class=" row justify-content-center">
+      <%= link_to @actor.wiki_url, target: :_blank, rel: "noopener noreferrer", class: "bulb-size" do %>
+        
+        <i class="fas fa-lightbulb bulb ml-4"></i>
+        <p class="bulb-font-size"><u>どんな人？</u></p>
+      <% end %>
+    </h5>
   </div>
   <%= render 'posts/posts', {posts: @posts } %>
   <%= render 'posts/form', { actor: @actor, post: @post } %>
