@@ -1,0 +1,16 @@
+<div class="row mb-5 mt-1">
+  <div class="col-lg-10 offset-lg-1 rounded py-3" style="background-color:#7c9377; color:#f7edd9; font-family: 'Sawarabi Mincho', sans-serif; backg">
+    <div class="text-center">
+      <h4>Request Actor</h4>
+    </div>
+    <%= form_with model: actor, local: true do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form-group">
+        <%= f.label :name %><span class="badge badge-dark ml-2"></span>
+        <%= f.text_field :name, class: 'form-control', id: 'js-new-actor-name',placeholder: '例）ジョニー・デップ' %>
+      </div>
+      <p class="text-center">※追加時の注意：wikipediaに登録されている名称で入力してください。</p>
+      <%= f.submit '追加！',class: 'btn btn-outline-light' %>
+    <% end %>
+  </div>
+</div>

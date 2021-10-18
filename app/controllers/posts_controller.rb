@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:likes).sort {|a,b| b.likes.size <=> a.likes.size}
+    @posts = Post.includes(:likes,:actor).sort {|a,b| b.likes.size <=> a.likes.size}
   end
   
   def create
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     binding.irb
     @post.author = '匿名希望' if @post.author.blank?
     if @post.save
-      redirect_to actor_path(@actor), success: '想いを追加しました'
+      redirect_to actor_path(@actor), success: '投稿ありがとう。想いは受け取った！'
     else
       redirect_to actor_path(@actor), danger: 'ごめんなさい、想いを追加出来ませんでした'
     end
