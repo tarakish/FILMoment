@@ -6,12 +6,12 @@
     <%= form_with model: post, url:[actor, post], id: "new_post", local: true do |f| %><%#idを付与しているのは下のエラーメッセージのパーシャルの位置を判定するため %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="form-group">
-        <%= f.label :scene %>
-        <%= f.text_area :scene, class: 'form-control', id: 'js-new-post-scene', row: 4, placeholder: '好きなシーン、見どころなど(必須)' %>
+        <%= f.label :scene %><span class="badge badge-dark ml-2">必須</span>
+        <%= f.text_area :scene, class: 'form-control', id: 'js-new-post-scene', row: 4, placeholder: '好きなシーン、見どころなど' %>
       </div>
       <div class="form-group">
-        <%= f.label :film_title %>
-        <%= f.text_field :film_title, class: 'form-control', id: 'js-new-post-title', placeholder: '作品名(必須)' %>
+        <%= f.label :film_title %><span class="badge badge-dark ml-2">必須</span>
+        <%= f.text_field :film_title, class: 'form-control', id: 'js-new-post-title', placeholder: '作品名' %>
       </div>
       <div class="form-group">
         <%= f.label :author %>
