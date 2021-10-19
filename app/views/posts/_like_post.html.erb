@@ -1,0 +1,16 @@
+
+<tr id="post-<%= post.id %>">
+  <td class="pb-2">
+    <div id="js-post-<%= post.id %>" class="pb-1 post-scene">
+      <%= simple_format(post.scene) %>
+    </div>
+    <h3 class="small"><%= post.film_title %>／<%= post.author %> - <%= post.actor.name %></h3>
+  </td>
+  <td>
+    <div class="list-inline justify-content-center mr-4 mt-2" style="float: right;">
+        <%= link_to post_likes_path(post), method: post, remote: true do %>
+          <i class="far fa-heart size"></i>
+        <% end %>
+        <h3 class="small mt-2 ml-1 likes"><%= post.likes.count %></h3>
+  </td>
+</tr>

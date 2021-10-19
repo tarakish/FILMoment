@@ -1,0 +1,27 @@
+<header>
+  <nav class='navbar navbar-expand-lg navigation navbar-dark' style='background-color:#54724f'>
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <span style="font-family: 'Nothing You Could Do', cursive; color: #f7edd9">FILMoment</span>
+    <% end %>
+    <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent'
+      aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav ml-auto main-nav align-items-center' style="font-family: 'Nothing You Could Do', cursive;">
+        <li class='nav-item'>
+          <%= link_to 'Actors', actors_path, class: 'nav-link' %>
+        </li>
+
+        <li class='nav-item'>
+          <%= link_to 'Top Scenes', posts_path, class: 'nav-link' %>
+        </li>
+
+        <li class='nav-item'>
+          <%= link_to 'Request Actor', new_actor_path, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

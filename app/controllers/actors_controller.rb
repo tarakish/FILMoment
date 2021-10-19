@@ -1,0 +1,37 @@
+class ActorsController < ApplicationController
+  before_action :set_actor, only: %i[show]
+  
+  def index
+    @actors = Actor.all
+    @actor = Actor.new
+  end
+
+  def show
+    @post = Post.new
+    @posts = @actor.posts
+  end
+
+  def new
+    @actor = Actor.new
+  end
+
+  def create
+    @actor = Actor.new(actor_params)
+    @actor.wiki_url = "https://ja.wikipedia.org/wiki/#{@actor.name}"
+    if @actor.save
+      redirect_to actor_path(@actor.id), success: 'あぁ！ほんとごめん、その人忘れてた。 ついでに好きなシーンも追加してくれると嬉しいな。'
+    else
+      flash.now[:danger] = 'ごめん！追加できなかった。'
+      render :new
+    end
+  end
+
+  private
+  def set_actor
+    @actor = Actor.find(params[:id])
+  end
+
+  def actor_params
+    params.require(:actor).permit(:name)
+  end
+end

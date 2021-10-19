@@ -1,0 +1,14 @@
+<div class="container mt-3 mb-5 pt-5">
+  <div class="row justify-content-center mb-5" style="font-family: 'Sawarabi Mincho', sans-serif; backg">
+    <h1><%= @actor.name %></h1>
+  </div>
+    <h5 class=" row justify-content-center">
+      <%= link_to @actor.wiki_url, target: :_blank, rel: "noopener noreferrer", class: "bulb-size" do %>
+        <i class="fas fa-user-secret bulb ml-4"></i>
+        <p class="bulb-font-size"><u>どんな人？</u></p>
+      <% end %>
+    </h5>
+  </div>
+  <%= render 'posts/posts', {posts: @posts } %>
+  <%= render 'posts/form', { actor: @actor, post: @post } %>
+</div>

@@ -1,0 +1,37 @@
+<%# <% content_for(:title, t('.title')) %>
+<div class="container mt-3 mb-5 pt-5">
+  <div class="row justify-content-center mb-5" style="font-family: 'Nothing You Could Do', cursive;">
+    <h1>Actors</h1>
+  </div>
+  <%# <div class="row">
+    <div class="col-md-12 mb-3">
+      <%= render 'search_form' 
+    </div>
+  </div> %>
+  <div class="row pt-1 justify-content-center">
+    <div class="col-md-8">
+      <table class="table table-hover table-borderless t-5 " style="font-family: 'Sawarabi Mincho', sans-serif; backg">
+        <thead>
+        <tr style="background-color:#54724f; color:#f7edd9;">
+          <th scope="col">Actor</th>
+          <th scope="col">Scenes</th>
+        </tr>
+        </thead>
+        <%= render @actors %>
+      </table>
+    </div>
+  </div>
+
+  <div class="row pt-1 justify-content-center">
+    <div class="col-md-8">
+    <p class="mt-3 text-center">語りたい<span class="lead">あの人</span>がいない...！と思ったら</p>
+      <%= render 'form', actor: @actor %>
+    </div>
+  </div>
+  <%# <div class="row">
+    <div class="col-md-12">
+      <!-- ページネーション -->
+      <%= paginate @users >
+    </div>
+  </div> %>
+</div>
