@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/runteq_normal_production
+  adapter: postgresql
+  encording: unicode
+  pool: 5
