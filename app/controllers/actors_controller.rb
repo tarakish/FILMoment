@@ -8,7 +8,7 @@ class ActorsController < ApplicationController
 
   def show
     @post = Post.new
-    @posts = @actor.posts
+    @posts = @actor.posts.order(created_at: :desc)
   end
 
   def new
