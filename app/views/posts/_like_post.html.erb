@@ -4,7 +4,7 @@
     <div id="js-post-<%= post.id %>" class="pb-1 post-scene">
       <%= simple_format(post.scene) %>
     </div>
-    <h3 class="small"><%= post.film_title %>／<%= post.author %> - <%= post.actor.name %></h3>
+    <h3 class="small"><%= post.film_title %>／<%= post.author %> - <%= link_to post.actor.name, actor_path(post.actor), class: "edit-link-with-u" %></h3>
   </td>
   <td>
     <div class="list-inline justify-content-center mr-4 mt-2" style="float: right;">
