@@ -11,15 +11,15 @@
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ml-auto main-nav align-items-center' style="font-family: 'Nothing You Could Do', cursive;">
         <li class='nav-item'>
-          <%= link_to 'Actors', actors_path, class: 'nav-link' %>
+          <%= link_to t('actors.index.title'), actors_path, class: 'nav-link' %>
         </li>
 
         <li class='nav-item'>
-          <%= link_to 'Top Scenes', posts_path, class: 'nav-link' %>
+          <%= link_to t('posts.index.title'), posts_path, class: 'nav-link' %>
         </li>
 
         <li class='nav-item'>
-          <%= link_to 'Add Actor', new_actor_path, class: 'nav-link' %>
+          <%= link_to t('actors.new.title'), new_actor_path, class: 'nav-link' %>
         </li>
       </ul>
     </div>

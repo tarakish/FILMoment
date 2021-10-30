@@ -5,7 +5,7 @@
     <h5 class=" row justify-content-center">
       <%= link_to @actor.wiki_url, target: :_blank, rel: "noopener noreferrer", class: "bulb-size" do %>
         <i class="fas fa-user-secret bulb ml-4"></i>
-        <p class="bulb-font-size"><u>どんな人？</u></p>
+        <p class="bulb-font-size"><u><%= Actor.human_attribute_name(:wiki_url) %></u></p>
       <% end %>
     </h5>
   </div>

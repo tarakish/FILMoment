@@ -1,0 +1,33 @@
+ja:
+  defaults:
+    add_caution_ph: '※追加時の注意：wikipediaに登録されている名称で入力してください。'
+    add_example_ph: '例）ジョニー・デップ'
+    add_actor: 'Add Actor'
+    add_actor_submit: '追加！'
+    required: '必須'
+    post_scene_ph: '好きなシーン、見どころなど'
+    post_submit: '語る！'
+    post_form_title: 'Post Your Scene'
+    th_scene: 'Scene'
+    th_info_like: '作品名／投稿者名 - 役者名'
+    th_like_html: '<span class="small">共感したら...</span>Like'
+    th_info_post: '作品名／投稿者名'
+
+
+  staticpages:
+    top:
+      title: 'FILMoment'
+      introduction: 'シーンで語る、映画共有サービス'
+      into_btn: '覗いてみる！'
+
+  actors:
+    index:
+      title: 'Actors'
+      add_message_html: '語りたい<span class="lead">あの人</span>がいない...！と思ったら'
+    new:
+      title: 'Add Actor'
+  likes:
+
+  posts:
+    index:
+      title: 'Top Scenes'
