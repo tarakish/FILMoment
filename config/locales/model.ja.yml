@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      actor: '役者'
+      post: '投稿'
+      like: 'Like'
+    attributes:
+      actor:
+        name: '役者名'
+        wiki_url: 'どんな人？'
+      post:
+        film_title: '作品名'
+        scene: '思い'
+        author: '投稿者名'
+      like:
+
+  attributes:
+    created_at: '作成日時'
+    updated_at: '更新日時'

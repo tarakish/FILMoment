@@ -1,23 +1,23 @@
 <div class="row mb-5 mt-5">
   <div class="col-lg-8 offset-lg-2 rounded py-3" style="background-color:#7c9377; color:#f7edd9; font-family: 'Sawarabi Mincho', sans-serif; backg">
     <div class="text-center">
-      <h4>Post Your Scene</h4>
+      <h4><%= t('defaults.post_form_title') %></h4>
     </div>
     <%= form_with model: post, url:[actor, post], id: "new_post", local: true do |f| %><%#idを付与しているのは下のエラーメッセージのパーシャルの位置を判定するため %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="form-group">
-        <%= f.label :scene %><span class="badge badge-dark ml-2">必須</span>
-        <%= f.text_area :scene, class: 'form-control', id: 'js-new-post-scene', row: 4, placeholder: '好きなシーン、見どころなど' %>
+        <%= f.label :scene %><span class="badge badge-dark ml-2"><%= t('defaults.required') %></span>
+        <%= f.text_area :scene, class: 'form-control', id: 'js-new-post-scene', row: 4, placeholder: t('defaults.post_scene_ph') %>
       </div>
       <div class="form-group">
-        <%= f.label :film_title %><span class="badge badge-dark ml-2">必須</span>
-        <%= f.text_field :film_title, class: 'form-control', id: 'js-new-post-title', placeholder: '作品名' %>
+        <%= f.label :film_title %><span class="badge badge-dark ml-2"><%= t('defaults.required') %></span>
+        <%= f.text_field :film_title, class: 'form-control', id: 'js-new-post-title', placeholder: Post.human_attribute_name(:film_title) %>
       </div>
       <div class="form-group">
         <%= f.label :author %>
-        <%= f.text_field :author, class: 'form-control', id: 'js-new-post-author', placeholder: '投稿者名' %>
+        <%= f.text_field :author, class: 'form-control', id: 'js-new-post-author', placeholder: Post.human_attribute_name(:author) %>
       </div>
-      <%= f.submit '語る！',class: 'btn btn-outline-light' %>
+      <%= f.submit t('defaults.post_submit'),class: 'btn btn-outline-light' %>
     <% end %>
   </div>
 </div>

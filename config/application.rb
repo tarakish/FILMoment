@@ -37,5 +37,10 @@ module RunteqNormal
       g.helper false 
       g.test_framework false 
     end
+
+    #デフォロケを日本語に設定
+    config.i18n.default_locale = :ja
+    #複数のロケールファイルの読み込み
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
   end
 end
